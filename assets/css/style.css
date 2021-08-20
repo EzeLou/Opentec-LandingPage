@@ -31,11 +31,12 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #10658c;
+  background: #10658c94;
   width: 40px;
   height: 40px;
   border-radius: 50px;
   transition: all 0.4s;
+  color: #fff;
 }
 
 .back-to-top i {
@@ -45,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top:hover {
-  background: #7ed899;
+  background: #10658c;
   color: #fff;
 }
 
