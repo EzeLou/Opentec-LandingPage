@@ -111,6 +111,66 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+/*--------------------------------------------------------------
+# HeaderNews
+--------------------------------------------------------------*/
+#headerNews {
+  background: #10658c;
+  color: #fffcf2;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 0.5rem 0;
+  box-shadow: 0px 0 1rem rgba(55, 66, 59, 0.08);
+}
+
+#headerNews .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+#headerNews .logo a {
+  color: #10658c;
+}
+
+#headerNews .logo img {
+  max-height: 4rem;
+}
+
+/**
+* Get Startet Button 
+*/
+.get-started-btn {
+  margin-left: 22px;
+  background: #10658c;
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+.get-started-btn:hover {
+  background: #10658c;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .get-started-btn {
+    margin: 0 0 0 0;
+    padding: 6px 18px;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -118,8 +178,9 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
+  padding: 0.1rem 0;
   box-shadow: 0px 0 18px rgba(55, 66, 59, 0.08);
+  margin-top: 3.5rem;
 }
 
 #header .logo {
@@ -388,6 +449,8 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
   position: relative;
+  background-position-x: inherit;
+
 }
 
 #hero:before {
