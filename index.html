@@ -35,7 +35,9 @@
 
 <body>
 
-  <a href="https://wa.me/543512846772" class="whatsapp" target="_blank"> <ion-icon name="logo-whatsapp"></ion-icon></a>
+  <a href="https://wa.me/543512846772" class="whatsapp" target="_blank">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+  </a>
 
   <header id="headerNews" class="fixed-top">
     <div class="container d-flex align-items-center">
@@ -649,7 +651,6 @@
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-6 col-md-6 footer-contact">
             <h3>Contáctanos</h3>
 
@@ -687,18 +688,77 @@
           </div>
 
           <div class="col-lg-6 col-md-6 footer-links">
-            <!--
-            <h3>Typeform</h3>
-            -->
 
+            <div style="width: 100%"><iframe width="100%" height="500rem" frameborder="0" scrolling="no"
+                marginheight="0" marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Juan%20Antonio%20Lavalleja%202165,%20X5000%20C%C3%B3rdoba+(OPENTEC)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                href="https://www.maps.ie/draw-radius-circle-map/"></a></div>
+
+
+            <!--
             <div data-tf-widget="FoeAfloU" style="width:100%;height:400px;color:#FFFFFF;"></div>
             <script src="//embed.typeform.com/next/embed.js"></script>
-
+            -->
           </div>
-
         </div>
+
+
       </div>
     </div>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row mt-5">
+
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Ingresa tu Nombre" required>
+              </div>
+
+              <div class="col-md-6 form-group">
+                <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Ingresa tu Apellido"
+                  required>
+              </div>
+
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="phone" class="form-control" name="phone" id="phone" placeholder="Ingresa tu Telefono"
+                  required>
+              </div>
+
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Ingresa tu Email">
+              </div>
+
+            </div>
+
+            <!--
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            -->
+
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="description" id="description" rows="5" placeholder="Ingresa tu consulta aqui"
+                required></textarea>
+            </div>
+
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Tu mensaje ha sido enviado, te contactaremos a la brevedad.</div>
+            </div>
+            <div class="text-center"><button type="submit">Enviar</button></div>
+          </form>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
 
     <div class="container d-md-flex py-4">
 
