@@ -1,9 +1,9 @@
 <?php
 // database connection code
-if(isset($_POST['txtName']))
+if(isset($_POST['first_name']))
 {
 // $con = mysqli_connect('localhost', 'database_user', 'database_password','database');
-$con = mysqli_connect('localhost', 'root', '','db_contact');
+$con = mysqli_connect('127.0.0.1:3306', 'u742194444_OPENTEC', 'deftFlamink2021','u742194444_contact_form');
 
 // get the post records
 
