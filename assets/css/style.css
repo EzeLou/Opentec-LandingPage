@@ -28,6 +28,7 @@
 # General
 --------------------------------------------------------------*/
 body {
+  padding-top: 8rem;
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
