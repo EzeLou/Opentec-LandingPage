@@ -19,6 +19,17 @@ $phone = $_POST['phone'];
 $email = $_POST['email'];
 $description = $_POST['description'];
 
+//send email
+$email_to = "thiagonicomb.xd@gmail.com";
+$email_subject = "Nueva Consulta OPENTEC";
+$email_body = '<p><strong>This is strong text</strong> while this is not.</p>';
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+$headers .= 'From: Contacto-Pagina@opentec.com' . "\r\n" . 'Reply-To: ezenoleintereza@example.com' . "\r\n";
+
+
+mail($email_to,$email_subject,$email_body,$headers);
+
 // database insert SQL code
 $sql = "INSERT INTO contacts (first_name,last_name,phone,email,description) VALUES ('$first_name', '$last_name', '$phone', '$email', '$description')";
 echo $sql;
