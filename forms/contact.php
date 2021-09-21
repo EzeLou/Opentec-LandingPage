@@ -29,7 +29,7 @@ $headers .= 'From: Contacto-Pagina@opentec.com' . "\r\n" . 'Reply-To: info@opent
 
 mail($email_to,$email_subject,$email_body,$headers);
 header( 'Location: https://deftflamink.com/test/');
-
+git
 https://deftflamink.com/test/
 // database insert SQL code
 $sql = "INSERT INTO contacts (first_name,last_name,phone,email,description) VALUES ('$first_name', '$last_name', '$phone', '$email', '$description')";
