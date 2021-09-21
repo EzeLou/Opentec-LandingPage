@@ -451,9 +451,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# inicio Section
 --------------------------------------------------------------*/
-#hero {
+#inicio {
   width: 100%;
   height: 80vh;
   background: url("../img/new/Artboard 2.png") top center;
@@ -463,7 +463,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-#hero:before {
+#inicio:before {
   content: "";
   background: rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -473,17 +473,17 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
 }
 
-#hero .container {
+#inicio .container {
   padding-top: 72px;
 }
 
 @media (max-width: 992px) {
-  #hero .container {
+  #inicio .container {
     padding-top: 62px;
   }
 }
 
-#hero h1 {
+#inicio h1 {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
@@ -492,13 +492,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 
-#hero h2 {
+#inicio h2 {
   color: #eee;
   margin: 10px 0 0 0;
   font-size: 24px;
 }
 
-#hero .btn-get-started {
+#inicio .btn-get-started {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 15px;
@@ -512,26 +512,26 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-#hero .btn-get-started:hover {
+#inicio .btn-get-started:hover {
   background: #10658c;
   border: 2px solid #10658c;
 }
 
 @media (min-width: 1024px) {
-  #hero {
+  #inicio {
     background-attachment: fixed;
   }
 }
 
 @media (max-width: 768px) {
-  #hero {
+  #inicio {
     height: 100vh;
   }
-  #hero h1 {
+  #inicio h1 {
     font-size: 28px;
     line-height: 36px;
   }
-  #hero h2 {
+  #inicio h2 {
     font-size: 18px;
     line-height: 24px;
   }
@@ -681,24 +681,24 @@ section {
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
-.why-us .content {
+.productos .content {
   padding: 30px;
   background: #10658c;
   border-radius: 4px;
   color: #fff;
 }
 
-.why-us .content h3 {
+.productos .content h3 {
   font-weight: 700;
   font-size: 34px;
   margin-bottom: 30px;
 }
 
-.why-us .content p {
+.productos .content p {
   margin-bottom: 30px;
 }
 
-.why-us .content .more-btn {
+.productos .content .more-btn {
   display: inline-block;
   background: rgba(255, 255, 255, 0.2);
   padding: 6px 30px 8px 30px;
@@ -707,16 +707,16 @@ section {
   transition: all ease-in-out 0.4s;
 }
 
-.why-us .content .more-btn i {
+.productos .content .more-btn i {
   font-size: 1.2rem;
 }
 
-.why-us .content .more-btn:hover {
+.productos .content .more-btn:hover {
   color: #10658c;
   background: #fff;
 }
 
-.why-us .icon-boxes .icon-box {
+.productos .icon-boxes .icon-box {
   text-align: center;
   background: #fff;
   padding: 40px 30px;
@@ -724,7 +724,7 @@ section {
   border: 1px solid #eef0ef;
 }
 
-.why-us .icon-boxes .icon-box i {
+.productos .icon-boxes .icon-box i {
   font-size: 32px;
   padding: 18px;
   color: #10658c;
@@ -733,25 +733,25 @@ section {
   border-radius: 50px;
 }
 
-.why-us .icon-boxes .icon-box h4 {
+.productos .icon-boxes .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 30px 0;
 }
 
-.why-us .icon-boxes .icon-box p {
+.productos .icon-boxes .icon-box p {
   font-size: 15px;
   color: #444444;
 }
 
 /*--------------------------------------------------------------
-# Features
+# servicios
 --------------------------------------------------------------*/
-.features {
+.servicios {
   padding-top: 3rem;
 }
 
-.features .icon-box {
+.servicios .icon-box {
   display: flex;
   align-items: center;
   padding: 20px;
@@ -759,13 +759,13 @@ section {
   border: 1px solid #eef0ef;
 }
 
-.features .icon-box i {
+.servicios .icon-box i {
   font-size: 32px;
   padding-right: 10px;
   line-height: 1;
 }
 
-.features .icon-box h3 {
+.servicios .icon-box h3 {
   font-weight: 700;
   margin: 0;
   padding: 0;
@@ -773,16 +773,16 @@ section {
   font-size: 16px;
 }
 
-.features .icon-box h3 a {
+.servicios .icon-box h3 a {
   color: #37423b;
   transition: 0.3s;
 }
 
-.features .icon-box:hover {
+.servicios .icon-box:hover {
   border-color: #10658c;
 }
 
-.features .icon-box:hover h3 a {
+.servicios .icon-box:hover h3 a {
   color: #10658c;
 }
 
