@@ -143,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fffcf2;
   transition: all 0.5s;
   z-index: 997;
-  padding: 0.5rem 0;
+  padding: 0.7rem 0;
   box-shadow: 0 0 1rem rgba(55, 66, 59, 0.08);
 }
 
