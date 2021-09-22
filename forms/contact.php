@@ -4,7 +4,7 @@
 //if(isset($_POST['first_name']))
 //{
 // $con = mysqli_connect('localhost', 'database_user', 'database_password','database');
-$con = mysqli_connect('127.0.0.1:3306', 'u742194444_OPENTEC', 'Canada2020','u742194444_contact_form');
+$con = mysqli_connect('localhost', 'w1130359_Contact', 'OpentecDatabase2021','w1130359_Contact');
 
 // check connection
 if(!$con){
