@@ -20,7 +20,7 @@ $email = $_POST['email'];
 $description = $_POST['description'];
 
 //send email
-$email_to  = "eze@deftflamink.com, thigo@deftflamink.com, thiagonicomb.xd@gmail.com"
+$email_to  = 'thiagonicomb.xd@gmail.com';
 $email_subject = "Nueva Consulta OPENTEC";
 $email_body = '<table><tr><th>Nombre: </th><th>'.$first_name.' '.$last_name.'</th></tr><tr><th>Telefono: </th><th>'.$phone.'</th></tr><tr><th>Email: </th><th>'.$email.'</th></tr><tr><th>Consulta: </th><th>'.$description.'</th></tr></table>';
 $headers  = 'MIME-Version: 1.0' . "\r\n";
