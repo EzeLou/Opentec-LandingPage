@@ -4,8 +4,8 @@
 //if(isset($_POST['first_name']))
 //{
 // $con = mysqli_connect('localhost', 'database_user', 'database_password','database');
-$con = mysqli_connect('localhost', 'w1130359_Contact', 'OpentecDatabase2021','w1130359_Contact');
-
+$con = mysqli_connect('localhost', 'w1130359_Contact', 'formDatabase2021','w1130359_Contact');
+									
 // check connection
 if(!$con){
     echo 'Connection error: '. mysqli_connect_error();
