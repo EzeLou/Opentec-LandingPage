@@ -28,24 +28,46 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <script src="https://www.google.com/recaptcha/api.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js?render=6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_"></script>
-
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-
+  <!-- ReCaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_"></script>
+  <!-- script>
+    function onClick(e) {
+      e.preventDefault();
+      grecaptcha.ready(function() {
+        grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
+          $con = mysqli_connect('localhost', 'w1130359_pepe', 'formDatabase2021','w1130359_Contact');
+          $first_name = $_POST['first_name'];
+          $last_name = $_POST['last_name'];
+          $phone = $_POST['phone'];
+          $email = $_POST['email'];
+          $description = $_POST['description'];
+          $email_to  = 'alejavtoledo@gmail.com' . ',' . 'deftflamink@gmail.com';
+          $email_subject = "Nueva Consulta OPENTEC";
+          $email_body = '<table><tr><th>Nombre: </th><th>'.$first_name . ' '.$last_name.'</th></tr><tr><th>Telefono: </th><th>'.$phone.'</th></tr><tr><th>Email: </th><th>'.$email.'</th></tr><tr><th>Consulta: </th><th>'.$description.'</th></tr></table>';
+          $headers  = 'MIME-Version: 1.0' . "\r\n";
+          $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+          $headers .= 'From: contacto-pagina@opentec.com.ar' . "\r\n" . 'Reply-To: info@opentec.com.ar' . "\r\n";
+          mail($email_to,$email_subject,$email_body,$headers);
+          $sql = "INSERT INTO contacts (first_name,last_name,phone,email,description) VALUES ('$first_name', '$last_name', '$phone', '$email', '$description')";
+          $rs = mysqli_query($con, $sql);
+          mysqli_close($con);
+        });
+      });
+    }
+  </script -->
 </head>
 
 <body>
-
   <!-- Messenger plugin de chat Code -->
   <div id="fb-root"></div>
 
   <!-- Your plugin de chat code -->
   <div id="fb-customer-chat" class="fb-customerchat">
   </div>
-  <script>
+  <!script>
     var chatbox = document.getElementById('fb-customer-chat');
     chatbox.setAttribute("page_id", "100156001430588");
     chatbox.setAttribute("attribution", "biz_inbox");
@@ -66,18 +88,6 @@
     }(document, 'script', 'facebook-jssdk'));
   </script>
 
-  <!-- ReCaptcha -->
-
-  <script>
-    function onClick(e) {
-      e.preventDefault();
-      grecaptcha.ready(function() {
-        grecaptcha.execute('6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_', {action: 'submit'}).then(function(token) {
-            // Add your logic to submit to your backend server here.
-        });
-      });
-    }
-  </script>
 
   <a href="https://wa.me/543512846772" class="whatsapp" target="_blank">
     <ion-icon name="logo-whatsapp"></ion-icon>
@@ -836,7 +846,7 @@
       <div class="container" data-aos="fade-up">
         <div class="row mt-5">
 
-          <form action="/forms/contact.php" method="post" role="form" class="php-email-form">
+          <form action="contact.php" method="post" role="form" class="php-email-form" id="demo-form">
             <div class="row">
               <div class="col-md-6 form-group">
                 <p>Nombre:</p>
@@ -880,12 +890,26 @@
               <div class="error-message"></div>
               <div class="sent-message">Tu mensaje ha sido enviado, te contactaremos a la brevedad.</div>
             </div>
-            <div class="text-center"><button type="submit" class="g-recaptcha btn btn-primary" data-sitekey="6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_" data-callback='onSubmit' data-action='submit'>Enviarrr plis</button></div>
+            <div class="text-center">
+              <div class="text-center"><button type="submit" class="g-recaptcha btn btn-primary" data-sitekey="6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_" data-callback='onSubmit' data-action='submit'>Enviar</button></div>
+              <!input type="submit" value="Submit" />
+              <!--button class="g-recaptcha" data-sitekey="6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_" data-callback='onSubmit' data-action='submit' type="submit" value="Submit">Enviar</button-->
+            </div>
+            <!-- div class="text-center"><button type="submit" class="g-recaptcha btn btn-primary" data-sitekey="6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_" data-callback='onSubmit' data-action='submit'>Enviar</button></div -->
           </form>
-
         </div>
       </div>
     </section><!-- End Contact Section -->
+
+    <!-- script>
+    grecaptcha.ready(function() {
+    grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'homepage'})
+    .then(function(token) {
+        //console.log(token);
+        document.getElementById('g-recaptcha-response').value=token;
+    });
+    });
+    </script-->
 
     <div class="container d-md-flex py-4">
 
