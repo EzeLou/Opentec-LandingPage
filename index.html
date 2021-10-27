@@ -33,31 +33,15 @@
 
   <!-- ReCaptcha -->
   <script src="https://www.google.com/recaptcha/api.js?render=6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_"></script>
-  <!-- script>
-    function onClick(e) {
-      e.preventDefault();
-      grecaptcha.ready(function() {
-        grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
-          $con = mysqli_connect('localhost', 'w1130359_pepe', 'formDatabase2021','w1130359_Contact');
-          $first_name = $_POST['first_name'];
-          $last_name = $_POST['last_name'];
-          $phone = $_POST['phone'];
-          $email = $_POST['email'];
-          $description = $_POST['description'];
-          $email_to  = 'alejavtoledo@gmail.com' . ',' . 'deftflamink@gmail.com';
-          $email_subject = "Nueva Consulta OPENTEC";
-          $email_body = '<table><tr><th>Nombre: </th><th>'.$first_name . ' '.$last_name.'</th></tr><tr><th>Telefono: </th><th>'.$phone.'</th></tr><tr><th>Email: </th><th>'.$email.'</th></tr><tr><th>Consulta: </th><th>'.$description.'</th></tr></table>';
-          $headers  = 'MIME-Version: 1.0' . "\r\n";
-          $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-          $headers .= 'From: contacto-pagina@opentec.com.ar' . "\r\n" . 'Reply-To: info@opentec.com.ar' . "\r\n";
-          mail($email_to,$email_subject,$email_body,$headers);
-          $sql = "INSERT INTO contacts (first_name,last_name,phone,email,description) VALUES ('$first_name', '$last_name', '$phone', '$email', '$description')";
-          $rs = mysqli_query($con, $sql);
-          mysqli_close($con);
-        });
-      });
-    }
-  </script -->
+  <script>
+  grecaptcha.ready(function() {
+  grecaptcha.execute('6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_', {action: 'forms\contact.php'})
+  .then(function(token) {
+  var recaptchaResponse = document.getElementById('recaptchaResponse');
+  recaptchaResponse.value = token;
+  });});
+  </script>
+
 </head>
 
 <body>
@@ -890,13 +874,9 @@
               <div class="error-message"></div>
               <div class="sent-message">Tu mensaje ha sido enviado, te contactaremos a la brevedad.</div>
             </div>
-            <script>
-              function onSubmit(token) {
-                document.forms["contact"].submit();
-              }
-            </script>
             <div class="text-center">
               <div class="text-center"><button type="submit" data-sitekey="6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_" class="g-recaptcha btn btn-primary" data-callback='onSubmit' data-action='submit'>Enviar</button></div>
+              <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
             </div>
           </form>
         </div>
