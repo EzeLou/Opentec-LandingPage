@@ -9,7 +9,7 @@
 if(!$con){
     echo 'Connection error: '. mysqli_connect_error();
 }
-
+echo 'bla bla'
 // get the post records
 
 function onClick(e) {
