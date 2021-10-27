@@ -1,16 +1,9 @@
 <?php 
 
-// database connection code
-//if(isset($_POST['first_name']))
-//{
-//$con = mysqli_connect('localhost', 'database_user', 'database_password','database');
-									
-// check connection
-
-// get the post records
 echo 'its works'
 header( 'Location: https://opentec.com.ar/');
 function onClick(e) {
+echo 'its works'
     e.preventDefault();
     grecaptcha.ready(function() {
         grecaptcha.execute('6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_', {action: 'submit'}).then(function(token) {
