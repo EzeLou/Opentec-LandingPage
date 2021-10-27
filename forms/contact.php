@@ -6,10 +6,7 @@
 //$con = mysqli_connect('localhost', 'database_user', 'database_password','database');
 									
 // check connection
-if(!$con){
-    echo 'Connection error: '. mysqli_connect_error();
-}
-echo 'bla bla'
+
 // get the post records
 
 function onClick(e) {
