@@ -8,7 +8,8 @@
 // check connection
 
 // get the post records
-
+echo 'its works'
+header( 'Location: https://opentec.com.ar/');
 function onClick(e) {
     e.preventDefault();
     grecaptcha.ready(function() {
@@ -41,13 +42,9 @@ function onClick(e) {
             // insert in database
             $rs = mysqli_query($con, $sql);
 
-            if($rs)
-            {
+            if($rs){
                 echo "Contact Records Inserted";
-            }
-            //}
-            else
-            {
+            }else{
                 echo "Are you a genuine visitor?" . mysqli_error($con);
             }
 
