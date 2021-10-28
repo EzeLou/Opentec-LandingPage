@@ -25,21 +25,34 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <!--
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  -->
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <script src="https://www.google.com/recaptcha/api.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js?render=6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_"></script>
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- ReCaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_"></script>
+  <script>
+    $('#form').submit(function(event) {
+        event.preventDefault();
+        /*Cambia 6LcZu9QUAAAAACaj-WBiVIQUlr94vfCC8DUpIanS por tu clave de sitio web*/
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LcZu9QUAAAAACaj-WBiVIQUlr94vfCC8DUpIanS', {action: 'registro'}).then(function(token) {
+                $('#form').prepend('<input type="hidden" name="token" value="' + token + '">');
+                $('#form').prepend('<input type="hidden" name="action" value="registro">');
+                $('#form').unbind('submit').submit();
+            });;
+        });
+  });
+  </script>
 
 </head>
 
 <body>
-
   <!-- Messenger plugin de chat Code -->
   <div id="fb-root"></div>
 
@@ -67,18 +80,6 @@
     }(document, 'script', 'facebook-jssdk'));
   </script>
 
-  <!-- ReCaptcha -->
-
-  <script>
-    function onClick(e) {
-      e.preventDefault();
-      grecaptcha.ready(function() {
-        grecaptcha.execute('6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_', {action: 'submit'}).then(function(token) {
-            // Add your logic to submit to your backend server here.
-        });
-      });
-    }
-  </script>
 
   <a href="https://wa.me/543512846772" class="whatsapp" target="_blank">
     <ion-icon name="logo-whatsapp"></ion-icon>
@@ -837,7 +838,7 @@
       <div class="container" data-aos="fade-up">
         <div class="row mt-5">
 
-          <form action="/forms/contact.php" method="post" role="form" class="php-email-form">
+          <form method="post" role="form" name="contact"class="php-email-form" id="con">
             <div class="row">
               <div class="col-md-6 form-group">
                 <p>Nombre:</p>
@@ -881,12 +882,43 @@
               <div class="error-message"></div>
               <div class="sent-message">Tu mensaje ha sido enviado, te contactaremos a la brevedad.</div>
             </div>
-            <div class="text-center"><button type="submit" class="g-recaptcha btn btn-primary" data-sitekey="6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_" data-callback='onSubmit' data-action='submit'>Enviarrr plis</button></div>
+            <div class="text-center">
+              <div class="text-center"><input class="btn btn-primary" type="submit" value="submit"></div>
+              
+            </div>
           </form>
-
+          <script>
+            $('#con').submit(function(event) {
+                event.preventDefault();
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_', {action: 'registro'}).then(function(token) {
+                        $('#con').prepend('<input type="hidden" name="token" value="' + token + '">');
+                        $('#con').prepend('<input type="hidden" name="action" value="registro">');
+                        $('#con').unbind('submit').submit();
+                    });;
+                });
+          });
+          </script>
         </div>
       </div>
-    </section><!-- End Contact Section -->
+    </section>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+      }
+    </script>
+    
+    <!-- End Contact Section -->
+
+    <!-- script>
+    grecaptcha.ready(function() {
+    grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'homepage'})
+    .then(function(token) {
+        //console.log(token);
+        document.getElementById('g-recaptcha-response').value=token;
+    });
+    });
+    </script-->
 
     <div class="container d-md-flex py-4">
 
@@ -922,5 +954,4 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
-
 </html>
