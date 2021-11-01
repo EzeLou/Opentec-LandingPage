@@ -8,7 +8,9 @@
   <title>OPENTEC</title>
   <meta content="En Opentec tenemos el motor que estas buscando para hacer tu portón automático. Tené una vida más segura y cómoda con tu portón automático. Tenemos motores para todo tipo.
   " name="description">
-  <meta content="seguridad, automatizacion, portones, electricos, porton, automaticos, puertas, automaticas, motor, codificacion, controles, reparacion, seguridad, residencias, Herrerìa, Portones, electricos, portones, levadizos, rejas" name="keywords">
+  <meta
+    content="seguridad, automatizacion, portones, electricos, porton, automaticos, puertas, automaticas, motor, codificacion, controles, reparacion, seguridad, residencias, Herrerìa, Portones, electricos, portones, levadizos, rejas"
+    name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -36,36 +38,38 @@
   <!-- ReCaptcha -->
   <script src="https://www.google.com/recaptcha/api.js?render=6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_"></script>
   <script>
-    $('#form').submit(function(event) {
-        event.preventDefault();
-        /*Cambia 6LcZu9QUAAAAACaj-WBiVIQUlr94vfCC8DUpIanS por tu clave de sitio web*/
-        grecaptcha.ready(function() {
-            grecaptcha.execute('6LcZu9QUAAAAACaj-WBiVIQUlr94vfCC8DUpIanS', {action: 'registro'}).then(function(token) {
-                $('#form').prepend('<input type="hidden" name="token" value="' + token + '">');
-                $('#form').prepend('<input type="hidden" name="action" value="registro">');
-                $('#form').unbind('submit').submit();
-            });;
-        });
-  });
+    $('#form').submit(function (event) {
+      event.preventDefault();
+      /*Cambia 6LcZu9QUAAAAACaj-WBiVIQUlr94vfCC8DUpIanS por tu clave de sitio web*/
+      grecaptcha.ready(function () {
+        grecaptcha.execute('6LcZu9QUAAAAACaj-WBiVIQUlr94vfCC8DUpIanS', { action: 'registro' }).then(function (token) {
+          $('#form').prepend('<input type="hidden" name="token" value="' + token + '">');
+          $('#form').prepend('<input type="hidden" name="action" value="registro">');
+          $('#form').unbind('submit').submit();
+        });;
+      });
+    });
   </script>
 
   <!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1330850787357680');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1330850787357680&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1330850787357680');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1330850787357680&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
 
 <body>
@@ -80,14 +84,14 @@
     chatbox.setAttribute("page_id", "100156001430588");
     chatbox.setAttribute("attribution", "biz_inbox");
 
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
       FB.init({
-        xfbml            : true,
-        version          : 'v12.0'
+        xfbml: true,
+        version: 'v12.0'
       });
     };
 
-    (function(d, s, id) {
+    (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
@@ -854,7 +858,7 @@
       <div class="container" data-aos="fade-up">
         <div class="row mt-5">
 
-          <form method="post" role="form" name="contact"class="php-email-form" id="con">
+          <form method="post" role="form" name="contact" class="php-email-form" id="con">
             <div class="row">
               <div class="col-md-6 form-group">
                 <p>Nombre:</p>
@@ -900,20 +904,20 @@
             </div>
             <div class="text-center">
               <div class="text-center"><input class="btn btn-primary" type="submit" value="submit"></div>
-              
+
             </div>
           </form>
           <script>
-            $('#con').submit(function(event) {
-                event.preventDefault();
-                grecaptcha.ready(function() {
-                    grecaptcha.execute('6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_', {action: 'registro'}).then(function(token) {
-                        $('#con').prepend('<input type="hidden" name="token" value="' + token + '">');
-                        $('#con').prepend('<input type="hidden" name="action" value="registro">');
-                        $('#con').unbind('submit').submit();
-                    });;
-                });
-          });
+            $('#con').submit(function (event) {
+              event.preventDefault();
+              grecaptcha.ready(function () {
+                grecaptcha.execute('6Leti88cAAAAAN8t9tthY9v2l30MTPqLCroZl4k_', { action: 'registro' }).then(function (token) {
+                  $('#con').prepend('<input type="hidden" name="token" value="' + token + '">');
+                  $('#con').prepend('<input type="hidden" name="action" value="registro">');
+                  $('#con').unbind('submit').submit();
+                });;
+              });
+            });
           </script>
         </div>
       </div>
@@ -923,7 +927,7 @@
         document.getElementById("demo-form").submit();
       }
     </script>
-    
+
     <!-- End Contact Section -->
 
     <!-- script>
@@ -970,4 +974,5 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>
