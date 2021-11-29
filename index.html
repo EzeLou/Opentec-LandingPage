@@ -56,7 +56,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -830,7 +830,12 @@
                 href="https://www.linkedin.com/company/opentecok">@opentecok</a>
             </p>
 
+            <a target="_blank" href="http://opentec.com">
+              <h1>Formulario de Contacto</h1>
+            </a>
+
           </div>
+
 
           <div class="col-lg-6 col-md-6 footer-links">
 
@@ -852,12 +857,15 @@
     </div>
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact footer-top">
+    <section id=" contact" class="contact footer-top">
 
+
+      <!-- formulario
 
       <div class="container" data-aos="fade-up">
         <div class="row mt-5">
-
+        
+          
           <form method="post" role="form" name="contact" class="php-email-form" id="con">
             <div class="row">
               <div class="col-md-6 form-group">
@@ -885,11 +893,11 @@
 
             </div>
 
-            <!--
+            --
             <div class="form-group mt-3">
               <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
             </div>
-            -->
+            --
 
             <div class="form-group mt-3">
               <p>Consulta:</p>
@@ -907,6 +915,7 @@
 
             </div>
           </form>
+        
           <script>
             $('#con').submit(function (event) {
               event.preventDefault();
@@ -921,7 +930,9 @@
           </script>
         </div>
       </div>
-    </section>
+
+    </section> formulario -->
+    
     <script>
       function onSubmit(token) {
         document.getElementById("demo-form").submit();
@@ -930,7 +941,7 @@
 
     <!-- End Contact Section -->
 
-    <!-- script>
+      <!-- script>
     grecaptcha.ready(function() {
     grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'homepage'})
     .then(function(token) {
@@ -940,19 +951,19 @@
     });
     </script-->
 
-    <div class="container d-md-flex py-4">
+      <div class="container d-md-flex py-4">
 
-      <div class="me-md-auto text-center text-md-start">
-        <div class="credits">
-          <p>
-            &copy; Copyright <strong><span>OPENTEC®</span></strong>. Todos los derechos reservados
-            <br>
-            Designed by <a href="http://deftflamink.com/">The Deft Flamink Company</a>
-          </p>
+        <div class="me-md-auto text-center text-md-start">
+          <div class="credits">
+            <p>
+              &copy; Copyright <strong><span>OPENTEC®</span></strong>. Todos los derechos reservados
+              <br>
+              Designed by <a href="http://deftflamink.com/">The Deft Flamink Company</a>
+            </p>
+          </div>
         </div>
-      </div>
 
-    </div>
+      </div>
   </footer><!-- End Footer -->
 
   <div id="preloader"></div>
